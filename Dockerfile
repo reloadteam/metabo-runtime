@@ -1,10 +1,4 @@
-FROM rocker/r-ver:4.3.3
-
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    r-cran-plumber \
-    r-cran-jsonlite \
-    ca-certificates \
-    && rm -rf /var/lib/apt/lists/*
+FROM rstudio/plumber:latest
 
 WORKDIR /app
 
